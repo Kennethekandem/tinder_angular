@@ -7,6 +7,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { BlankComponent } from './components/layouts/blank/blank.component';
 import { DefaultComponent } from './components/layouts/default/default.component';
+import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DefaultComponent } from './components/layouts/default/default.component
     LoginComponent,
     RegisterComponent,
     BlankComponent,
-    DefaultComponent
+    DefaultComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
