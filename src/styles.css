@@ -44,3 +44,9 @@
 h5 {
     font-size: 1.85rem;
 }
+.form-floating>.form-control, .form-floating>.form-select {
+    background: #f5f7fa;
+}
+.form-control:focus {
+    box-shadow: none;
+}

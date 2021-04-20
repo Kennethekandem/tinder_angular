@@ -21,12 +21,12 @@
         <div class="bg-header">
             <h1>Swipe Right <span>&reg;</span></h1>
 
-            <button class="btn btn-primary" type="submit">CREATE ACCOUNT</button>
+            <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#registerModal">CREATE ACCOUNT</button>
         </div>
     </div>
 </section>
 
-<!-- Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content container">
@@ -42,6 +42,39 @@
                     <div class="form-floating mb-4">
                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">LOG IN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content container">
+            <button type="button" class="btn-close mb-10 col-12" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header">
+                <div class="mt-10">
+                    <img height="50" src="../../../../assets/images/tinder_logo_small.svg" alt="">
+                    <h5 class="modal-title" id="RegisterModalLabel"><b>CREATE ACCOUNT</b></h5>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <form>
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control" id="floatingInput1" placeholder="name@example.com">
+                        <label for="floatingInput1">Name</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+                        <label for="floatingInput2">Email address</label>
                     </div>
                     <div class="form-floating mb-4">
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
