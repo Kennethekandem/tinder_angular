@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {TokenInterceptor} from "./interceptors/token/token.interceptor";
 import { HomeComponent } from './components/pages/home/home.component';
 import {FormsModule} from "@angular/forms";
+import { SideComponent } from './components/partials/side/side.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule} from "@angular/forms";
     BlankComponent,
     DefaultComponent,
     WelcomeComponent,
-    HomeComponent
+    HomeComponent,
+    SideComponent
   ],
   imports: [
     BrowserModule,
