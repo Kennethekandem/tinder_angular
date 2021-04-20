@@ -2,6 +2,8 @@
     width: 100vw;
     height: 100vh;
     background-image: url("../../../../assets/images/bg.webp");
+    background-position: center;
+    background-size: cover;
 }
 .overlay {
     height: inherit;
@@ -9,10 +11,27 @@
 }
 .navbar {
     background-color: transparent !important;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 .navbar-light .navbar-nav .nav-link {
     color: #fff !important;
 }
 .W\(150px\) {
     width: 150px;
+}
+.bg-header {
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 13rem;
+}
+.bg-header h1 {
+    font-size: 8rem;
+    font-weight: 600;
+}
+.bg-header h1 span {
+    font-size: 3rem;
+    font-weight: 300;
 }
