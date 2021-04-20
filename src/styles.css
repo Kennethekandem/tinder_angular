@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.btn {
+    padding: .5rem 2rem;
+}
+.btn-light {
+    color: #fd5068;
+    border: 0;
+}
+.btn-light:hover {
+    background: linear-gradient(262deg,#ff7854,#fd267d);
+    color: #fff;
+}
