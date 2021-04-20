@@ -9,6 +9,8 @@ import { BlankComponent } from './components/layouts/blank/blank.component';
 import { DefaultComponent } from './components/layouts/default/default.component';
 import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { WelcomeComponent } from './components/pages/welcome/welcome.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

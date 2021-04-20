@@ -34,7 +34,7 @@
 .btn-close {
     float: right !important;
 }
-.form-control {
+.form-control, .form-select {
     border: 0;
 }
 .form-floating>.form-control:-webkit-autofill {
