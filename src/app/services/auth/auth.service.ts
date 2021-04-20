@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
 })
 export class AuthService {
 
-  private authUrl = environment.baseURL + '/auth';
+  private authUrl = environment.baseURL + 'auth';
   constructor(
       private http: HttpClient,
       private router: Router
@@ -19,10 +19,10 @@ export class AuthService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('accessToken');
   }
 
   getToken() {
-    return localStorage.getItem('token');
+    return localStorage.getItem('accessToken');
   }
 }

@@ -9,7 +9,10 @@ import { BlankComponent } from './components/layouts/blank/blank.component';
 import { DefaultComponent } from './components/layouts/default/default.component';
 import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {TokenInterceptor} from "./interceptors/token/token.interceptor";
+import { HomeComponent } from './components/pages/home/home.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,14 +21,22 @@ import {HttpClientModule} from '@angular/common/http';
     RegisterComponent,
     BlankComponent,
     DefaultComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
