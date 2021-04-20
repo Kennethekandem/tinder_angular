@@ -10,3 +10,12 @@
     background: linear-gradient(262deg,#ff7854,#fd267d);
     color: #fff;
 }
+.btn-primary {
+    background: linear-gradient(262deg,#ff7854,#fd267d);
+    border: 0;
+    border-radius: 40px;
+    padding: 1rem 4rem;
+}
+.btn-primary:hover {
+    background: linear-gradient(262deg,#fd267d,#ff7854);
+}
