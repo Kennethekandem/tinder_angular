@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
 })
 export class WelcomeComponent implements OnInit {
 
+    user = {};
   loginData: any = {};
 
   constructor(
@@ -23,6 +24,9 @@ export class WelcomeComponent implements OnInit {
     this.service
         .login(this.loginData)
         .subscribe((data: any) => {
+
+            this.user = data.data._doc;
+            this.getUser();
               localStorage.setItem('accessToken', data.data.accessToken);
               this.router.navigate(['/home']);
             },
@@ -31,4 +35,7 @@ export class WelcomeComponent implements OnInit {
             })
   }
 
+  getUser() {
+      localStorage.setItem('user', JSON.stringify(this.user));
+  }
 }
