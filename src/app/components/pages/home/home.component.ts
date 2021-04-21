@@ -9,8 +9,8 @@ import { UserService } from "../../../services/user/user.service";
 export class HomeComponent implements OnInit {
 
   users: any = [];
-  user: any = {};
-  id = JSON.parse(<string>localStorage.getItem('user_id'));
+  getUser: any = {};
+  user = JSON.parse(<string>localStorage.getItem('user'));
 
   constructor(
       private service: UserService
@@ -23,13 +23,13 @@ export class HomeComponent implements OnInit {
   all() {
 
     this.service
-        .all(this.id)
+        .all(this.user._id)
         .subscribe((response: any) => {
           this.users = response.data;
         })
   }
 
   single() {
-    this.user = this.users[Math.floor(Math.random() * this.users.length)];
+    this.getUser = this.users[Math.floor(Math.random() * this.users.length)];
   }
 }
