@@ -1,4 +1,5 @@
 .side-header {
     height: 70px;
     background: linear-gradient(262deg,#ff7854,#fd267d);
+    box-shadow: 0 1px 8px 0 rgb(0 17 25 / 27%);
 }
