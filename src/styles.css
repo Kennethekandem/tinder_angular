@@ -50,3 +50,15 @@ h5 {
 .form-control:focus, .form-select:focus {
     box-shadow: none;
 }
+.rounded-img {
+    border-radius: 100%;
+    object-fit: cover;
+}
+p a {
+    color: #fff;
+    text-decoration: none;
+}
+.profile-col p {
+    margin-left: 15px;
+    margin-top: 10px;
+}
