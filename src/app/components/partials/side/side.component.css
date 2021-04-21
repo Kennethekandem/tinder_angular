@@ -3,3 +3,9 @@
     background: linear-gradient(262deg,#ff7854,#fd267d);
     box-shadow: 0 1px 8px 0 rgb(0 17 25 / 27%);
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #000000;
+     background-color: transparent;
+    border-bottom: 3px solid #fd5068;
+    border-radius: 0;
+}
