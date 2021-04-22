@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.all();
-    this.single()
   }
 
   all() {
@@ -27,11 +26,11 @@ export class HomeComponent implements OnInit {
         .all(this.user._id)
         .subscribe((response: any) => {
           this.users = response.data;
+          this.single()
         })
   }
 
   single() {
-    console.log("hello");
     this.getUser = this.users[Math.floor(Math.random() * this.users.length)];
   }
 }
