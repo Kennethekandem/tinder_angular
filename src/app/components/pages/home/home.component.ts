@@ -9,6 +9,7 @@ import { UserService } from "../../../services/user/user.service";
 export class HomeComponent implements OnInit {
 
   users: any = [];
+  allMatches: any = [];
   getUser: any = {};
   user = JSON.parse(<string>localStorage.getItem('user'));
 
@@ -32,5 +33,13 @@ export class HomeComponent implements OnInit {
 
   single() {
     this.getUser = this.users[Math.floor(Math.random() * this.users.length)];
+  }
+
+  matches() {
+    this.service
+        .match(this.user._id)
+        .subscribe((response: any) => {
+          this.allMatches = response.data;
+        })
   }
 }

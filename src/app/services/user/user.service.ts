@@ -17,4 +17,12 @@ export class UserService {
   all(id: string) {
     return this.http.get(this.userUrl + 'all/' + id);
   }
+
+  match(id: string) {
+    return this.http.get(this.userUrl + 'matches/' + id);
+  }
+
+  single(id: string) {
+    return this.http.get(this.userUrl + '/' + id);
+  }
 }
