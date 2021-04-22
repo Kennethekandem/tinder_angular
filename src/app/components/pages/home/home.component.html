@@ -8,7 +8,7 @@
             <div class="card-body like-nope">
                 <span class="like-nope-buttons">
                     <button type="button" class="like-nope-button" (click)="single()"><i class="fas fa-times"></i></button>
-                    <button class="like-nope-button"><i class="fas fa-heart"></i></button>
+                    <button type="submit" class="like-nope-button"><i class="fas fa-heart" (click)="like(getUser._id)"></i></button>
                 </span>
             </div>
         </div>

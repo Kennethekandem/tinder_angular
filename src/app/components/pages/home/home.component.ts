@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   allMatches: any = [];
   getUser: any = {};
   user = JSON.parse(<string>localStorage.getItem('user'));
+  likeData: any = {};
 
   constructor(
       private service: UserService
@@ -33,6 +34,16 @@ export class HomeComponent implements OnInit {
 
   single() {
     this.getUser = this.users[Math.floor(Math.random() * this.users.length)];
+  }
+
+  like(liked_id: any) {
+    let data = {user_id: this.user._id, liked_id, match: 0};
+    this.service
+        .like(data)
+        .subscribe((response: any) => {
+          this.user = response.data._doc;
+          this.single();
+        });
   }
 
   matches() {

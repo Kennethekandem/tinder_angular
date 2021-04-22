@@ -25,4 +25,8 @@ export class UserService {
   single(id: string) {
     return this.http.get(this.userUrl + '/' + id);
   }
+
+  like(data : any) {
+    return this.http.post(this.userUrl + '/like', data);
+  }
 }

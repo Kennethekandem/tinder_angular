@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../../../services/auth/auth.service";
+import { UserService } from "../../../services/user/user.service";
 import { Router } from "@angular/router";
 import { FormBuilder, FormGroup } from "@angular/forms";
 
@@ -12,10 +13,12 @@ export class WelcomeComponent implements OnInit {
 
   user = {};
   loginData: any = {};
+  likeData = {};
 
   form: any = FormGroup;
 
   constructor(
+      private userService: UserService,
       private service: AuthService,
       private router: Router,
       private formBuilder: FormBuilder
@@ -76,6 +79,15 @@ export class WelcomeComponent implements OnInit {
             error => {
 
             })
+  }
+
+  like() {
+      this.userService
+          .like(this.loginData)
+          .subscribe((response: any) => {
+              this.user = response.data._doc;
+              this.getUser();
+          });
   }
 
   getUser() {
