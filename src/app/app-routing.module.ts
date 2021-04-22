@@ -20,16 +20,6 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'auth',
-    component: BlankComponent,
-    children: [
-      {
-        path: 'login',
-        component: LoginComponent
-      }
-    ]
-  },
-  {
     path: 'home',
     component: DefaultComponent,
     canActivate: [AuthGuard],

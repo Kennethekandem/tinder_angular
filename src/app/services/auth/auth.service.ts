@@ -25,4 +25,8 @@ export class AuthService {
   getToken() {
     return localStorage.getItem('accessToken');
   }
+
+  register(formData : any) {
+    return this.http.post(this.authUrl + '/register', formData);
+  }
 }

@@ -12,7 +12,7 @@ import { WelcomeComponent } from './components/pages/welcome/welcome.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {TokenInterceptor} from "./interceptors/token/token.interceptor";
 import { HomeComponent } from './components/pages/home/home.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { SideComponent } from './components/partials/side/side.component';
 
 @NgModule({
@@ -26,12 +26,13 @@ import { SideComponent } from './components/partials/side/side.component';
     HomeComponent,
     SideComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

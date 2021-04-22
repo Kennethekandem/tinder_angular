@@ -67,43 +67,48 @@
                 </div>
             </div>
             <div class="modal-body text-center">
-                <form>
+                <form method="post" enctype="multipart/form-data" [formGroup]="form" (ngSubmit)="add()">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput1" placeholder="John doe">
+                        <input type="text" class="form-control" id="floatingInput1" name="name" formControlName="name" placeholder="John doe">
                         <label for="floatingInput1">Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="floatingInput2" name="email" formControlName="email" placeholder="name@example.com">
                         <label for="floatingInput2">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="floatingInput3" placeholder="phone number">
+                        <input type="number" class="form-control" id="floatingInput3" name="phone" formControlName="phone" placeholder="phone number">
                         <label for="floatingInput3">Phone number</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="location" placeholder="Location">
+                        <input type="text" class="form-control" id="location" name="location" formControlName="location" placeholder="Location">
                         <label for="location">Location</label>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="age" placeholder="Age">
+                                <input type="number" class="form-control" id="age" name="age" formControlName="age" placeholder="Age">
                                 <label for="age">Age</label>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="form-floating">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                    <option selected>Male</option>
-                                    <option value="1">Female</option>
+                                <select class="form-select" name="gender" formControlName="gender" id="floatingSelect" aria-label="Floating label select example">
+                                    <option selected value="M">Male</option>
+                                    <option value="F">Female</option>
                                 </select>
                                 <label for="floatingSelect">Gender</label>
                             </div>
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword1" placeholder="Password">
+                        <input type="password" class="form-control" name="password" id="floatingPassword1" formControlName="password" placeholder="Password">
                         <label for="floatingPassword1">Password</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label sr-only">Profile Picture</label>
+                        <input class="form-control" type="file" formControlName="profile_photo" name="profile_photo" (change)="profilePhoto($event)" id="formFile">
                     </div>
                     <button type="submit" class="btn btn-primary">REGISTER</button>
                 </form>
