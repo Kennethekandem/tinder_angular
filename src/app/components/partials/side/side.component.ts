@@ -28,7 +28,6 @@ export class SideComponent implements OnInit {
 
           this.allMatches.map((match : any) => {
 
-
             match.likes.forEach((like: any) => {
                 let id = like.liked_id;
                 this.service
