@@ -27,13 +27,17 @@ export class SideComponent implements OnInit {
           this.allMatches = response.data;
 
           this.allMatches.map((match : any) => {
-            let id = match._id;
 
-            this.service
-                .single(id)
-                .subscribe((response: any) => {
-                  this.users.push(response.data);
-                })
+
+            match.likes.forEach((like: any) => {
+                let id = like.liked_id;
+                this.service
+                    .single(id)
+                    .subscribe((response: any) => {
+                        this.users.push(response.data);
+                    })
+            })
+
           })
         })
   }
